@@ -2,8 +2,10 @@ class Cart
   @@cart = []
   
   def initialize(name)
-    @cart = cart
+    @name = name
   end
   
-  
+  def self.all 
+    @@cart 
+  end 
 end 
