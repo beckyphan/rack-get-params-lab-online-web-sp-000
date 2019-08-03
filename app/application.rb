@@ -42,9 +42,9 @@ class Application
     items_to_add.each do |item|
       if @@items.include?(item)
         @@cart << item
-        return "Added #{item}"
+        puts "Added #{item}"
       else 
-        return "We don't have that item"
+        puts "We don't have that item"
       end
     end
   end 
