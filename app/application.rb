@@ -39,6 +39,7 @@ class Application
   end
   
   def add_to_cart(item_to_add)
+    binding.pry
     if @@items.include?(item_to_add)
       @@cart << item_to_add
        return "Added #{item_to_add}"
