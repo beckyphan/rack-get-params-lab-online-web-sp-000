@@ -42,7 +42,7 @@ class Application
     items_to_add.each do |item|
       if @@items.include?(item)
         @@cart << item
-        puts "Added #{item}"
+        puts "Added #{item}\n"
       else 
         puts "We don't have that item"
       end
