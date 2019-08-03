@@ -25,7 +25,6 @@ class Application
     elsif req.path.match(/add/)
       item_to_add = req.params["q"]
       resp.write add_to_cart(item_to_add)
-      binding.pry
     else
       resp.write "Path Not Found"
     end
@@ -42,9 +41,9 @@ class Application
   end
   
   def add_to_cart(item_to_add)
-    binding.pry
     if @@items.include?(item_to_add)
       @@cart << item_to_add
+      binding.pry
       return "Added #{item_to_add}"
     else 
       return "We don't have that item"
