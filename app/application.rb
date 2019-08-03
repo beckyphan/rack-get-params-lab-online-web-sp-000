@@ -39,11 +39,13 @@ class Application
   end
   
   def add_to_cart(items_to_add)
-    if @@items.include?(items_to_add)
-      @@cart << item_to_add
-      return "Added #{item_to_add}"
-    else 
-      return "We don't have that item"
+    items_to_add.each do |item|
+      if @@items.include?(item)
+        @@cart << item
+        return "Added #{item}"
+      else 
+        return "We don't have that item"
+      end
     end
   end 
 end
