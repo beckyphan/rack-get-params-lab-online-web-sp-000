@@ -1,5 +1,9 @@
 class Cart 
   @@cart = []
   
-  def initialize()
+  def initialize(name)
+    @cart = cart
+  end
+  
+  
 end 
