@@ -42,6 +42,7 @@ class Application
     if @@items.include?(item) 
       @@cart << item 
     else 
+      resp = Rack::Response.new
       resp.write "Error"
     end
   end 
