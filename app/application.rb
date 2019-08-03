@@ -44,7 +44,7 @@ class Application
       @@cart << item 
       resp.write "Added #{item}"
     else 
-      resp.write "Error"
+      resp.write "We don't have that item"
     end
   end 
 end
