@@ -37,6 +37,9 @@ class Application
   end
   
   def add_to_cart(item)
-    
+    if @@items.include?(item) 
+      @@cart << item 
+    else 
+      resp.write "Error"
   end 
 end
