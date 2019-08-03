@@ -3,7 +3,7 @@ class Cart
   
   def initialize(name)
     @name = name
-    @items = []
+    @c_items = []
   end
   
   def self.all 
