@@ -45,7 +45,7 @@ class Application
     binding.pry
     if @@items.include?(item_to_add)
       @@cart << item_to_add
-       return "Added #{item_to_add}"
+      return "Added #{item_to_add}"
     else 
       return "We don't have that item"
     end
