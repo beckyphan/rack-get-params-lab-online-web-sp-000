@@ -23,8 +23,8 @@ class Application
         resp.write "Your cart is empty"
       end 
     elsif req.path.match(/add/)
-      item_to_add = req.params["q"]
-      resp.write add_to_cart(item_to_add)
+      item = req.params["item"]
+      resp.write add_to_cart(item)
     else
       resp.write "Path Not Found"
     end
@@ -40,11 +40,11 @@ class Application
     end
   end
   
-  def add_to_cart(item_to_add)
-    if @@items.include?(item_to_add)
-      @@cart << item_to_add
+  def add_to_cart(item)
+    if @@items.include?(item)
+      @@cart << item
       binding.pry
-      return "Added #{item_to_add}"
+      return "Added #{item}"
     else 
       return "We don't have that item"
     end
