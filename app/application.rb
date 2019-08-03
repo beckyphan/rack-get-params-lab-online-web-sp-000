@@ -22,7 +22,7 @@ class Application
       end 
     elsif req.path.match(/add/)
       item_to_add = req.params["a"]
-      resp.write add_to_cart(item)
+      resp.write add_to_cart(item_to_add)
     else
       resp.write "Path Not Found"
     end
