@@ -39,12 +39,11 @@ class Application
   end
   
   def add_to_cart(item)
-    resp = Rack::Response.new
-    if @@items.include?(item) 
-      @@cart << item 
-      resp.write "Added #{item}"
+    if @@items.include?(item)
+      @@cart << item
+      return "Added #{item}"
     else 
-      resp.write "We don't have that item"
+      return "We don't have that item"
     end
   end 
 end
