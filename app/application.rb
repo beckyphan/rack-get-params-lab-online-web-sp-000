@@ -22,7 +22,7 @@ class Application
       end 
     elsif req.path.match(/add/)
       items_to_add = req.params["a"]
-      resp.write add_to_cart(items_to_add)
+      resp.write add_to_cart(item_to_add)
     else
       resp.write "Path Not Found"
     end
@@ -38,14 +38,12 @@ class Application
     end
   end
   
-  def add_to_cart(items_to_add)
-    items_to_add.each do |item|
-      if @@items.include?(item)
-        @@cart << item
-        puts "Added #{item}\n"
-      else 
-        puts "We don't have that item"
-      end
+  def add_to_cart(item_to_add)
+    if @@items.include?(item_to_add)
+      @@cart << item_to_add
+       puts "Added #{item_to_add}"
+    else 
+      puts "We don't have that item"
     end
   end 
 end
